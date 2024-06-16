@@ -1,4 +1,4 @@
-/* Reinicio de estilos básicos */
+/* Reinicio de estilos básicos de navegador */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -26,7 +26,7 @@
     grid-area: header;
     background-color: #f8f9fa;
     padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* me gusta usar esta propiedad, es un efecto útil*/
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center;
@@ -59,7 +59,7 @@
 .nav-links {
     display: flex;
     list-style: none;
-    margin: 10px 0; /* Ajuste para centrar verticalmente */
+    margin: 10px 0; /* Ajuste para centrar verticalmente responsive */
     gap: 20px;
 }
 
@@ -75,11 +75,11 @@
 }
 
 .nav-links a:hover {
-    color: #007bff;
+    color: #7e4969;
     transform: scale(1.1);
 }
 
-/* Estilos del sidebar */
+/* Estilos del aside */
 .sidebar {
     grid-area: aside;
     background-color: #f1f1f1;
@@ -122,9 +122,9 @@
     justify-content: space-between;
 }
 
-.sidebar h3 span {
+.sidebar span {
     color: #999;
-    font-size: 16px;
+    font-size: 12.5px;
 }
 
 /*las cards*/
@@ -139,21 +139,21 @@
 
 .card {
     border: 1px solid #ccc;
-    flex: 1 1 calc(25% - 10px); /* ajusta el tamaño según el número de columnas */
+    flex: 1 1 calc(25% - 10px); /* ajusta el tamaño de columnas hasta 2, para el modo responsive */
     text-align: center;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 16px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* visto en un tutorial de en YT */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* los efectos de las cards */
 }
 
 .card:hover {
-    transform: translateY(-5px); /* visto en un tutorial en YT */
+    transform: translateY(-5px); /* los efectos de las cards */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
+.card img { /* el pointer se lo agrego para dar el efecto de enlace para detalles */
     max-width: 100%;
     border-radius: 10px 10px 0 0;
     cursor: pointer;
@@ -181,7 +181,7 @@
 }
 
 .card button:hover {
-    background-color: #0056b3;
+    background-color: #d463c9;
 }
 
 /* Estilos del footer */
@@ -215,14 +215,14 @@
 }
 
 .social-icon:hover {
-    color: #007bff;
-    transform: scale(1.1);
+    color: #7e4969;
+    transform: scale(1.2);
 }
 
-/* Medias queries para pantallas pequeñas */
+/* Medias queries para responsive */
 @media (max-width: 900px) {
     .container {
-        grid-template-areas: 
+        grid-template-areas: /* para dejarlo en 2 columnas */
             "header header"
             "main main"
             "aside aside"
@@ -242,7 +242,7 @@
     }
 
     .nav-links {
-        flex-direction: column;
+        flex-direction: column; /* queda mejor */
         gap: 10px;
         align-items: center; /* Centra los enlaces */
     }
